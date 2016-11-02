@@ -10,7 +10,7 @@ module.exports = function (server, options) {
     //geo code finder
     server.route({
         method: 'get',
-        path: '/v1/user/geocode',
+        path: '/v1/googleApi/geocode',
         config: {
             handler: appHandler.getAddressGeoCode,
             description: 'get geocode location for matching address',
@@ -27,7 +27,7 @@ module.exports = function (server, options) {
     //geo code finder through place api
     server.route({
         method: 'get',
-        path: '/v1/user/placeGeocode',
+        path: '/v1/googleApi/placeGeocode',
         config: {
             handler: appHandler.getPlaceGeoCode,
             description: 'get places nearby to given address with geo location',
