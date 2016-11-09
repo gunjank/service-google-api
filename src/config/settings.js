@@ -28,7 +28,8 @@ let getGoogleApiKey = function () {
 let settings = {
     googleApiKey: getGoogleApiKey(),
     googleGeoCodeApiUrl: 'https://maps.googleapis.com/maps/api/geocode/json',
-    googlePlaceApiTextSearchUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json'
+    googlePlaceApiTextSearchUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json',
+    port: process.env.PORT || 3004
 }
 
 module.exports = settings;

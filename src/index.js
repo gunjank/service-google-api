@@ -1,20 +1,23 @@
 'use strict';
 
+let bunyan = require('bunyan');
+//log class will now globally available
+global.log = bunyan.createLogger({
+    name: 'service-google-api'
+});
+
+
 let path = require('path'),
     Lout = require('lout'),
     Good = require('good'),
     GoodFile = require('good-file'),
-    bunyan = require('bunyan'),
     Hapi = require('hapi'),
     Inert = require('inert'),
     Vision = require('vision'),
     HapiSwagger = require('hapi-swagger'),
-    Pack = require('../package');
+    Pack = require('../package'),
+    settings = require('./config/settings');
 
-//log clas will now globally available
-global.log = bunyan.createLogger({
-    name: 'service-google-api'
-});
 
 /**
  * Construct the server
@@ -38,7 +41,7 @@ log.info('server constructed');
 // port: config.port
 
 server.connection({
-    port: process.env.PORT || 3004
+    port: settings.port
 
 });
 //debug('added port: ', config.port);
