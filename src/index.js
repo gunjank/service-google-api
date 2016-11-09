@@ -18,7 +18,6 @@ let path = require('path'),
     Pack = require('../package'),
     settings = require('./config/settings');
 
-
 /**
  * Construct the server
  */
@@ -58,8 +57,6 @@ server.register([Inert, Vision, {
 }], function (err) {
     if (err) log.info("Inert or Vision plugin failed, it will stop swagger");
 });
-
-
 
 /**
  * Build a logger for the server & each service

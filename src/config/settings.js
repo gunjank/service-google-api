@@ -5,7 +5,6 @@ const cfenv = require("cfenv");
 let appEnv = cfenv.getAppEnv();
 let googleApiKeyService = appEnv.getService("google_api_key");
 
-
 let getGoogleApiKey = function () {
     //** local testing **//
 
@@ -20,10 +19,7 @@ let getGoogleApiKey = function () {
         log.info('googleApiKeyService  available, reading  service details');
     }
     return googleApiKeyService.credentials.key;
-
 }
-
-
 
 let settings = {
     googleApiKey: getGoogleApiKey(),

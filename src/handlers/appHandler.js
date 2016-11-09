@@ -60,10 +60,4 @@ module.exports = {
             });
         } //end of place api geocode finder 
 
-
-
-
-
-
-
 }

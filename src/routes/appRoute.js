@@ -4,9 +4,6 @@ const Joi = require('joi');
 let appHandler = require('../handlers/appHandler');
 
 module.exports = function (server, options) {
-    // read
-
-
     //geo code finder
     server.route({
         method: 'get',
